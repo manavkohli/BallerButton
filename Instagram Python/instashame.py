@@ -1,8 +1,7 @@
 #example taken from:
 #https://github.com/lukecyca/python-instagram-upload
 import instagram
-USERNAME="thekohlice"
-PASSWORD="tennis1"
+
 
 def shameFriends(username, password):
 	filepath = "noobs.jpg"
