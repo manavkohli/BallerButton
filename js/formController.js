@@ -1,9 +1,6 @@
 $(document).ready(function (){
-	// document.domain = "shielded-thicket-6358.herokuapp.com"
-	console.log("loaded page");
-	//The form
 
-	//for adding buttons
+	//Adding a button
 	var addApp = angular.module("addForm", []);
 	addApp.controller("addController", function($scope, $http) {
 		$scope.buttonFunctionURL = "";
@@ -38,11 +35,10 @@ $(document).ready(function (){
 	
 
 
-	//select the function to upload to the button
+	//Updating button
 	var selectApp = angular.module("selectForm", []);
 
 	selectApp.factory("selectFactory", function($http){
-		// var serverUrl = "https://pure-brushlands-9706.herokuapp.com/cloudapi/functions";
 		var serverUrl = "https://pure-brushlands-9706.herokuapp.com/cloudapi/functions";
 		this.getList = function(){
 			return $http({
@@ -85,10 +81,4 @@ $(document).ready(function (){
 			});
 		}
 	});
-
-
-
-
-
 });
-
