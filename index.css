@@ -1,0 +1,56 @@
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(http://ih1.redbubble.net/image.47940845.1300/flat,1000x1000,075,f.u2.jpg);
+  background-repeat: repeat-y;
+}
+
+body{
+	font-family: "Casale NBP";
+}
+
+
+
+.title-section{
+	background: black;
+	opacity: 0.7;
+	height: 45%;
+	text-align: center;
+	font-family: "Casale NBP";
+	color: white;
+}
+.title{
+	padding-top: 40px;
+	margin-top: 15%;
+	font-size: 100px;
+	margin-bottom: 0px;
+}
+
+.subtitle{
+	font-size: 50px;
+}
+
+.header{
+	height: 50px;
+	float: top;
+	background: black;
+	opacity: 0.7;
+	padding-top: 15px;
+}
+
+.header a{
+	color: white;
+	font-size: 18px;
+	border-style: dotted;
+	margin: 18px;
+	border-width: 3px;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.header a:hover{
+	color: yellow;
+	text-decoration: none;
+}

@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title> The Baller Button App </title>
+		<!-- fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+  		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+		<!-- CSS -->
+		<link href="default.css" rel='stylesheet' type="text/css">
+
+
+		<!-- JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="formController.js"></script>
+		<script src="global.js"></script>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="header"> C:\Users\The Baller Button</div>
+
+
+		<div class="form-container">
+
+			<h1> Add new function </h1>
+			<div ng-app="addForm" ng-controller="addController">
+				<form ng-submit="addFunction()">
+					<div>
+						<label for="url">URL:</label>
+						<input type="text" ng-model="url" value="url"> </p>
+					</div>
+					<label>Auth Token:</label>
+					<input type="text" ng-model="authToken"> </p>
+					<label for="keyOne">Key One:</label> 
+					<input type="text" ng-model="keyOne" value="keyOne"> </p>
+					<label for="valueOne">Value One:</label> 
+					<input type="text" ng-model="valueOne" value="valueOne"> </p>
+					<label for="keyTwo">Key Two:</label> 
+					<input type="text" ng-model="keyTwo" value="keyTwo"> </p>
+					<label for="valueTwo">Value Two:</label> 
+					<input type="text" ng-model="valueTwo" value="valueTwo"> </p>
+					<input type="submit" value="Add to Baller Button"> </input>
+				</form>
+				
+
+				<p>{{showURL()}}</p>
+			</div>
+			<img src="http://vignette1.wikia.nocookie.net/mortalkombat/images/b/b0/Ermaccombo_2.gif/revision/latest?cb=20120404182514&path-prefix=es" float="left">
+			<img src="http://www.drdmkm.eu/joe/images/MK/MK%20Gifs/subzerogrdfrz.gif" class="right">
+			<audio src="troll_slayer.mp3" loop></audio>
+		</div>
+	</body>
+</html>

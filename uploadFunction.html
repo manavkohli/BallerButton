@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title> The Baller Button App </title>
+		<!-- fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+  		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+		<!-- CSS -->
+		<link href="uploadFunction.css" rel='stylesheet' type="text/css">
+
+
+		<!-- JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="formController.js"></script>
+		<script src="global.js"></script>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="header"> C:\Users\The Baller Button</div>
+		<div class="form-container">
+			<h1> Upload Function </h1>
+			<div ng-app="selectForm" ng-controller="selectController">
+				<form ng-submit="selectFunction()">
+					<select ng-model="selectedItem">
+						<option selected="selected" disabled>Please choose an option</option>
+						<option ng-repeat="x in buttonFunctions" value="{{x.buttonFunctionID}}" ng-model="item"> {{x.buttonFunctionDesc}}</option>
+					</select>
+					<input type="submit" value="Add to Baller Button"> </input>
+				</form>
+			</div>
+			<img src="http://vignette1.wikia.nocookie.net/mortalkombat/images/b/b0/Ermaccombo_2.gif/revision/latest?cb=20120404182514&path-prefix=es" float="left">
+			<img src="http://www.drdmkm.eu/joe/images/MK/MK%20Gifs/subzerogrdfrz.gif" class="right">
+			<audio src="troll_slayer.mp3" autoplay loop></audio>
+		</div>
+	</body>
+</html>
