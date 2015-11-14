@@ -18,28 +18,27 @@
 	</head>
 
 	<body>
-		<div class="header"> C:\Users\The Baller Button</div>
-
+		<div class="header"> 
+			<div class="header-title"> C:\Users\The Baller Button <br> </div>
+			<div class="headerItems">
+				<a href="index.html">Home</a>
+				<a href="changeFunction.html">Change Function</a>
+			</div>
+		</div>
 
 		<div class="form-container">
 
 			<h1> Add new function </h1>
 			<div ng-app="addForm" ng-controller="addController">
 				<form ng-submit="addFunction()">
-					<div>
-						<label for="url">URL:</label>
-						<input type="text" ng-model="url" value="url"> </p>
-					</div>
-					<label>Auth Token:</label>
-					<input type="text" ng-model="authToken"> </p>
-					<label for="keyOne">Key One:</label> 
-					<input type="text" ng-model="keyOne" value="keyOne"> </p>
-					<label for="valueOne">Value One:</label> 
-					<input type="text" ng-model="valueOne" value="valueOne"> </p>
-					<label for="keyTwo">Key Two:</label> 
-					<input type="text" ng-model="keyTwo" value="keyTwo"> </p>
-					<label for="valueTwo">Value Two:</label> 
-					<input type="text" ng-model="valueTwo" value="valueTwo"> </p>
+					<label>Function ID:</label>
+					<input type="text" ng-model="buttonFunctionID"> </p>
+					<label>Description:</label>
+					<input type="text" ng-model="buttonFunctionDesc"> </p>
+					<label>URL:</label> 
+					<input type="text" ng-model="buttonFunctionURL"> </p>
+					<label>Arguments:</label> 
+					<input type="text" ng-model="buttonFunctionArgs"> </p>
 					<input type="submit" value="Add to Baller Button"> </input>
 				</form>
 				

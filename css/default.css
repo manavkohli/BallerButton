@@ -25,7 +25,6 @@ h1{
 
 .header{
 	width: 100%;
-	font-size: 24px;
 	text-align: center;
 	font-family: "Casale NBP";
 	background: black;
@@ -35,6 +34,23 @@ h1{
 	padding-bottom: 12px;
 }
 
+.header-title{
+	font-size: 24px;
+}
+.header-items{
+	font-size: 16px;
+}
+
+a{
+	color: yellow;
+	text-decoration: none;
+	padding-left: 30px;
+}
+
+a:hover{
+	color: white;
+	text-decoration: none;
+}
 
 .form-container{
 	width: 70%;

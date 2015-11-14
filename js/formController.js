@@ -5,31 +5,37 @@ $(document).ready(function (){
 
 	//for adding buttons
 	var addApp = angular.module("addForm", []);
-	addApp.controller("addController", function($scope) {
-		$scope.requestInfo = [];
-		$scope.requestInfo["url"] = "";
-		$scope.url = "";
+	addApp.controller("addController", function($scope, $http) {
+		$scope.buttonFunctionURL = "";
+		$scope.buttonFunctionID ="";
+		$scope.buttonFunctionDesc="";
+		$scope.buttonFunctionArgs="";
+
 		//Shows URL
 		$scope.showURL = function(){
-			$scope.requestInfo.url = $scope.url;
-
-			return "The url is: " + $scope.requestInfo.url;
+			return "The url is: " + $scope.buttonFunctionURL;
 		};
+
 		$scope.addFunction = function(){
 			var functionJSON = {
-				"url": $scope.url,
-				"valueOne": $scope.valueOne,
-				"valueTwo": $scope.valueTwo,
-				"keyOne": $scope.keyOne,
-				"keyTwo": $scope.keyTwo
-			}
-			console.log(functionJSON);
-		
-			//TODO: POST button
-		};
+				"buttonFunctionID": $scope.buttonFunctionID,
+				"buttonFunctionDesc": $scope.buttonFunctionDesc,
+				"buttonFunctionURL": $scope.buttonFunctionURL,
+				"buttonFunctionArgs": $scope.buttonFunctionArgs,
+				};
+				var addFunctionURL = "https://pure-brushlands-9706.herokuapp.com/cloudapi/function_creation";
+				//TODO: POST button
+				$http.post(addFunctionURL, functionJSON).then(function successCallback(response){
+				console.log("successfully added new function!");
+			    console.log(response);
 
+				}, function errorCallback(response){
+				console.log("couldn't add a new function");
+			    console.log(response);
+				});
+			};				
+		});
 	
-	});
 
 
 	//select the function to upload to the button
@@ -68,7 +74,7 @@ $(document).ready(function (){
 				"function_id": $scope.selectedItem
 			}
 			//Sends a get request to update the button
-			var addFunctionURL = "https://pure-brushlands-9706.herokuapp.com/cloudapi/function_assignment"
+			var addFunctionURL = "https://pure-brushlands-9706.herokuapp.com/cloudapi/function_assignment";
 			$http.post(addFunctionURL, itemJSON).then(function successCallback(response){
 				console.log("successfully updated button function!");
 			    console.log(response);
